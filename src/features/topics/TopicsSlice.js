@@ -20,14 +20,15 @@ const topicsSlice = createSlice ({
             state.topics[id] = newTopic;
         },
 
-        extraReducers: (builder) => {
-            builder.addCase(addQuiz, (state, action) => {
-                const { id, topicId } = action.payload;
-                console.log(topicId)
-                    state.topics[topicId].quizIds.push(id);
-            })
-        }
+        
     },
+    extraReducers: (builder) => {
+        builder.addCase(addQuiz, (state, action) => {
+            const { id, topicId } = action.payload;
+            console.log(topicId)
+                state.topics[topicId].quizIds.push(id);
+        })
+    }
 })
 
 // Selector to select the topics object
