@@ -23,7 +23,8 @@ const topicsSlice = createSlice ({
         extraReducers: (builder) => {
             builder.addCase(addQuiz, (state, action) => {
                 const { id, topicId } = action.payload;
-                state.topics[topicId].quizIds.push(id);
+                console.log(topicId)
+                    state.topics[topicId].quizIds.push(id);
             })
         }
     },
