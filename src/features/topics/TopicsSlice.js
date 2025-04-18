@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 //Create Slice
 const topicsSlice = createSlice ({
-    name: 'allTopics',
+    name: 'topics',
     initialState: {
         topics: {},
     },
@@ -22,7 +22,7 @@ const topicsSlice = createSlice ({
 })
 
 // Selector to select the topics object
-export const selectTopics = (state) => state.allTopics.topics;
+export const selectTopics = (state) => state.topics.topics;
 
 // Export the action creators and reducer
 export const {addTopic} = topicsSlice.actions;
